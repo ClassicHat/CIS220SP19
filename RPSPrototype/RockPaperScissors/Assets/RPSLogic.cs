@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RPSLogic : MonoBehaviour
 {
@@ -18,18 +19,38 @@ public class RPSLogic : MonoBehaviour
 	void Update ()
     {
         GameObject playerChoice = ChooseFighter();
-        GameObject aIChoice = AIChoice();
 
-        Winner(playerChoice, aIChoice);
-
+        if (playerChoice != null)//playerChoice.GetComponent("paperPrefab") || playerChoice.GetComponent("rockPrefab") || playerChoice.GetComponent("scissorPrefab"))
+        {
+            GameObject aIChoice = AIChoice();
+            Instantiate(playerChoice, new Vector3(-10, 0, 0), Quaternion.identity);
+            Instantiate(aIChoice, new Vector3(10, 0, 0), Quaternion.identity);
+            Winner(playerChoice, aIChoice);
+            playerChoice = null;
+        }//End if
+        
     }//End Update
 
     public void Winner(GameObject player, GameObject aI)
     {
-        if(player.GetComponent("paperPrefab") && aI.GetComponent("scissorPrefab"))
+        //All the ways the player can lose
+        if(player.GetComponent("paperPrefab") && aI.GetComponent("scissorsPrefab"))
         {
-            
+            Text message = this.GetComponent<Text>();
+            message.text = "You Lose. Try Again.";
         }
+        else if(player.GetComponent("rockPrefab") && aI.GetComponent("paperPrefab"))
+        {
+            Text message = this.GetComponent<Text>();
+            message.text = "You Lose. Try Again.";
+        }
+        else if(player.GetComponent("scissorsPrefab") && aI.GetComponent("rockPrefab"))
+        {
+            Text message = this.GetComponent<Text>();
+            message.text = "You Lose. Try Again.";
+        }
+
+        //All the ways the player can win
     }
 
     public GameObject ChooseFighter()
@@ -38,7 +59,7 @@ public class RPSLogic : MonoBehaviour
         bool paper = Input.GetKeyDown(KeyCode.P);
         bool rock = Input.GetKeyDown(KeyCode.R);
         bool scissors = Input.GetKeyDown(KeyCode.S);
-        GameObject playerChoice = paperPrefab;
+        GameObject playerChoice = null;
 
         if (paper)
         {

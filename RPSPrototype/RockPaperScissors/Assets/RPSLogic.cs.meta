@@ -3,7 +3,13 @@ guid: 3c63a7814dbf3664aa8555077c8d3269
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - paperPrefab: {fileID: 1036069154692154, guid: bc36176d46476ae41a970df594cc4c9b,
+      type: 2}
+  - rockPrefab: {fileID: 1236267311576878, guid: 478210302a7bb634694818c7656aad34,
+      type: 2}
+  - scissorsPrefab: {fileID: 1065765315892574, guid: 92013d6b666065e408404b91c35c6ac2,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
