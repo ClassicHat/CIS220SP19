@@ -21,7 +21,7 @@ public class RPSLogic : MonoBehaviour
         messageChange = message.GetComponent<Text>();
 
         //Set the starting message
-        messageChange.text = "Pick a Fighter!";
+        messageChange.text = "Pick P for Paper, Pick R for Rock, And Pick S for Scissors!";
 	}
 	
 	// Update is called once per frame
