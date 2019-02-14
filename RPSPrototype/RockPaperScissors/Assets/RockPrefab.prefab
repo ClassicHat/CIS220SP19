@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33807255692242928}
   - component: {fileID: 23274957167026546}
   - component: {fileID: 135853999385989884}
+  - component: {fileID: 114412919237921370}
   m_Layer: 8
   m_Name: RockPrefab
   m_TagString: Rock
@@ -84,6 +85,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1236267311576878}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114412919237921370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236267311576878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eccfb48161fdd8a44814856b410a2566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 1236267311576878}
 --- !u!135 &135853999385989884
 SphereCollider:
   m_ObjectHideFlags: 1

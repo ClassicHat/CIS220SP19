@@ -273,6 +273,7 @@ MonoBehaviour:
   rockPrefab: {fileID: 1236267311576878, guid: 478210302a7bb634694818c7656aad34, type: 2}
   scissorsPrefab: {fileID: 1065765315892574, guid: 92013d6b666065e408404b91c35c6ac2,
     type: 2}
+  messageChange: {fileID: 0}
 --- !u!1 &1128491106
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ GameObject:
   - component: {fileID: 1383287927}
   - component: {fileID: 1383287926}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,8 +400,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -40}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -339.4, y: -40}
+  m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383287926
 MonoBehaviour:
