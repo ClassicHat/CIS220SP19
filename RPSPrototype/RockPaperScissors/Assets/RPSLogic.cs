@@ -57,6 +57,14 @@ public class RPSLogic : MonoBehaviour
         
     }//End Update
 
+    /// <summary>
+    /// Expects: The player's GameObject and the AI's GameObject.
+    /// Returns: Nothing
+    /// Tasks: Compares the two game objects to see who beats who.
+    ///     Paper beats Rock, Rock beats Scissors, Scissors beats Paper.
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="aI"></param>
     public void Winner(GameObject player, GameObject aI)
     {
         //All the ways the player can lose
@@ -107,6 +115,14 @@ public class RPSLogic : MonoBehaviour
         }//End if / else if / else if
     }//End Winner
 
+    /// <summary>
+    /// Expects: Nothing
+    /// Returns: The players choice
+    /// Tasks: Using an input identifier, this method looks for the pressing of
+    ///     the R, P, or S key and then returns the coresponding GameObject
+    ///     prefab. R = RockPrefab, P = PaperPrefab, S = ScissorPrefab.
+    /// </summary>
+    /// <returns></returns>
     public GameObject ChooseFighter()
     {
         //Looks for input by pressing keys P, R, or S.
@@ -118,22 +134,26 @@ public class RPSLogic : MonoBehaviour
         if (paper)
         {
             playerChoice = paperPrefab;
-            //Instantiate(paperPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         }
         else if (rock)
         {
             playerChoice = rockPrefab;
-            //Instantiate(rockPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         }
         else if (scissors)
         {
             playerChoice = scissorsPrefab;
-            //Instantiate(scissorsPrefab, new Vector3(0, 4, 0), Quaternion.identity);
         }
 
         return playerChoice;
     }//End ChooseFighter
 
+    /// <summary>
+    /// Expects: Nothing
+    /// Returns: The AI choice
+    /// Tasks: Gets a random number between 1 and 3 and then returns the AI's choice.
+    ///     1 = PaperPrefab, 2 = RockPrefab, 3 or else = ScissorPrefab.
+    /// </summary>
+    /// <returns></returns>
     public GameObject AIChoice()
     {
         GameObject aIChoice;
@@ -154,5 +174,4 @@ public class RPSLogic : MonoBehaviour
 
         return aIChoice;
     }//End AIChoice
-
 }//End Class
