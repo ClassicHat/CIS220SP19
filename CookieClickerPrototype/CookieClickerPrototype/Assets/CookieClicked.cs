@@ -5,14 +5,9 @@ using UnityEngine.UI;
 
 public class CookieClicked : MonoBehaviour
 {
-	// Update is called once per frame
-	void Update ()
+	public void CookieWasClicked()
     {
-        //Debug.Log("Update Method");
-    }
-
-    public void CookieWasClicked()
-    {
+        //Just used for debuging
         Debug.Log("Cookie Was Clicked");
     }
     

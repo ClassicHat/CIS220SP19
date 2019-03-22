@@ -2,20 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button2x : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+public class Button2x : MonoBehaviour
+{
     public void ChangeClickValue()
     {
+        //increments the value of a click by 2x
         TotalCookies.ClickValue *= 2;
     }
 }

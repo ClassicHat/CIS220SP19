@@ -19,12 +19,6 @@ public class TotalCookies : MonoBehaviour
         totalCookies = cookies.GetComponent<Text>();
     }
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     public void UpdateTotalCookies()
     {
         //parse the text of the total cookies into an int
