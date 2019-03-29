@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Tile : MonoBehaviour {
+
+    [Header("Set Dynamically")]
+    public int x;
+    public int y;
+    public int tileNum;
+
+	// Use this for initialization
+	public void SetTile (int eX, int eY, int eTileNum = -1) {
+        x = eX;
+        y = eY;
+        transform.localPosition = new Vector3(x, y, 0);
+
+        // D3 takes up 3 spaces - if x = 23 and y = 5 its represented as 023x005
+        gameObject.name = x.ToString("D3") + "x" + y.ToString("D3");
+
+        if (eTileNum == 1)
+        {
+            eTileNum = TileCamera.GET_MAP(x, y);
+        }
+        tileNum = eTileNum;
+        GetComponent<SpriteRenderer>().sprite = TileCamera.SPRITES[tileNum];
+	}
+}
